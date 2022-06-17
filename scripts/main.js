@@ -16,18 +16,18 @@ myImage.onclick = function (){
 // Get and storage user in local storage.
 function setUserName(){
 	let myName = prompt("Please enter your name: ");
-	if (!myname) {
+	if (!myName) {
 		setUserName();
 	}
 	else{
-	localStorage.setItem("name", myName);
-	myHeading.textContent = "Mozzila is cool, " + myName;
+		localStorage.setItem("name", myName);
+		myHeading.textContent = "Mozzila is cool, " + myName;
 	}
 }
 
 //Display stored name or check to get a new name.
 if (!localStorage.getItem("name")) { //get and check the "name" from local storage.
-	setUserName();
+		setUserName();
 	}
 else{
 		let storedName = localStorage.getItem("name");
